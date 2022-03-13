@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/inputpage.dart';
 
 class UiDialogs extends StatefulWidget {
   const UiDialogs({Key? key}) : super(key: key);
@@ -207,6 +208,26 @@ class _UiDialogsState extends State<UiDialogs> {
               height: 5,
             ),
             Text(deletestatus),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    (MaterialPageRoute(
+                      builder: (context) => const InputPractisePage(),
+                    )));
+              },
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+              ),
+              color: Colors.black,
+              child: const Text(
+                'tap me to go to text input page',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
           ],
         ),
       ),
